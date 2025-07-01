@@ -1,9 +1,8 @@
-version: '3.8'
-
 services:
   typebot-builder:
-    ports:
-      - "3100:3000"
+    expose:
+      - "3000"
+
   typebot-viewer:
-    ports:
-      - "3101:3000"
+    expose:
+      - "3000"
