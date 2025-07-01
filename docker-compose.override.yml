@@ -2,6 +2,12 @@ services:
   typebot-builder:
     ports:
       - "3100:3000"
+    environment:
+      - TYPEBOT_PUBLIC_VIEWER_URL=https://typebot.temsysgroup.com
+      - TYPEBOT_INTERNAL_VIEWER_ENDPOINT=http://typebot-viewer:3000
+
   typebot-viewer:
     ports:
       - "3101:3000"
+    environment:
+      - TYPEBOT_INTERNAL_BUILDER_ENDPOINT=http://typebot-builder:3000
